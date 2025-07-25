@@ -1,0 +1,168 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.profile-image {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+.skill {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.skill-bar {
+  height: 20px;
+  background-color: #555;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.front {
+  width: 90%;
+  background-color: #00adb5;
+}
+
+.design {
+  width: 80%;
+  background-color: #ff5722;
+}
+
+.back {
+  width: 75%;
+  background-color: #4caf50;
+}
+
+.stats .w3-quarter {
+  transition: transform 0.3s;
+}
+
+.stats .w3-quarter:hover {
+  transform: scale(1.1);
+}
+
+.service-box {
+  margin-bottom: 32px;
+}
+
+.testimonial {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.social-icons {
+  font-size: 24px;
+  margin: 16px 0;
+}
+
+.social-icons i {
+  margin-right: 20px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #00adb5;
+}
+
+form input {
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+form input:focus {
+  outline: none;
+  background-color: #333;
+  color: #fff;
+}
+
+button[type="submit"] {
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #00adb5;
+  color: #fff;
+}
+
+
+img, i.fab {
+  transition: transform 0.3s ease;
+}
+
+img:hover, i.fab:hover {
+  transform: scale(1.05);
+}
+
+
+.animated-name {
+  display: inline-block;
+  animation: fadeInSlide 2s ease-in-out infinite alternate;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.skill-bar {
+  height: 20px;
+  border-radius: 10px;
+  width: 0; /* Start with 0 width for animation */
+  opacity: 0;
+  animation: growBar 2s ease-out forwards;
+  margin-top: 5px;
+}
+
+.skill-bar.front {
+  background-color: #00b6bd;
+  animation-delay: 0.3s;
+}
+
+.skill-bar.design {
+  background-color: #ff5722;
+  animation-delay: 0.6s;
+}
+
+.skill-bar.back {
+  background-color: #4caf50;
+  animation-delay: 0.9s;
+}
+
+@keyframes growBar {
+  to {
+    width: 90%;  /* adjust based on your skill level */
+    opacity: 1;
+  }
+}
+
+
+.skill-bar {
+  height: 20px;
+  border-radius: 10px;
+  width: 0;
+  opacity: 0;
+  animation: growBar 2s ease-out forwards;
+  animation-delay: 0.3s;
+  background-color: var(--color);
+}
+
+@keyframes growBar {
+  to {
+    width: var(--width);
+    opacity: 1;
+  }
+}
